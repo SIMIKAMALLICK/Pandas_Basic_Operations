@@ -48,3 +48,22 @@ This project demonstrates basic file handling operations in Python, including re
 ---
 `testWrite.txt`
 <img width="1915" height="375" alt="image" src="https://github.com/user-attachments/assets/58654044-d576-47a1-8422-9162f6502590" />
+
+---
+### 2. Joining DataFrames
+
+Two DataFrames (`players1` and `players2`) are merged using different join types:
+
+- **Inner Join** - Returns only rows with matching keys in both DataFrames.  
+- **Left Join** - Returns all rows from the left DataFrame and matching rows from the right.  
+- **Right Join** - Returns all rows from the right DataFrame and matching rows from the left.  
+- **Outer Join** - Returns all rows from both DataFrames, filling missing values with NaN.  
+
+```python
+pd.merge(players1, players2, on='name', how='inner')
+pd.merge(players1, players2, on='name', how='left')
+pd.merge(players1, players2, on='name', how='right')
+pd.merge(players1, players2, on='name', how='outer')
+```
+### Results:
+<img width="1916" height="1017" alt="image" src="https://github.com/user-attachments/assets/67ec12bd-ce3f-4b61-8aee-e06b22eefc5a" />
